@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Wiki - {{ title }}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="alert alert-primary" role="alert">
+      <h1 class="text-primary found-title">{{ title }}</h1>
+      <p class="mt-4">{{ entry }}</p>
+    </div>
+  </div>
+
+
+
+{% endblock %}

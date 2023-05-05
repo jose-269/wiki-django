@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Wiki - {{ title }}
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="alert alert-danger" role="alert">
+      <h1 class="text-danger not-found-title">{{ title }}</h1>
+      <p class="mt-4">The "{{ title }}" enrty doesn`t exist.</p>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form action="{% url 'wiki:new' %}" method="post">
+        {% csrf_token %}
+        <h1 class="mb-4">New entry</h1>
+        <label for="newEntry" class="form-label mb-0">Add a new title</label>
+        <input id="newEntry" name="title" type="text" class="form-control mb-3" placeholder="Add a new title">
+        <label for="nerText" class="form-label mb-0">Add a new entry</label>
+        <textarea id="nerText" name="content" class="md-textarea form-control mb-3" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary d-block mx-auto">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

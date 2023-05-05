@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Match - Wiki
+{% endblock %}
+
+{% block body %}
+  <h4>Maybe you meant:</h4>
+
+  <ul>
+    {% for match in matches %}
+    <li><a href="{% url 'wiki:title' match %}">{{ match }}</li></a>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
