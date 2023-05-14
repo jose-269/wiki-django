@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+  Edit-entry
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="alert alert-primary" role="alert">
+        <h1 class="text-primary found-title">{{ title }}</h1>
+      </div>
+      <form action="{% url 'wiki:edit' title %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ title }}" hidden>
+        <label class="mb-0" for="editEntry">Edit {{ title }} content</label>
+        <textarea class="form-control md-textarea mb-3" id="content" name="content" rows="5" vale="{{entry}}">{{ entry }}</textarea>
+        <button type="submit" class="btn btn-primary d-block mx-auto">Edit entry</button>
+      </form>
+
+      {% if error_msg %}
+          <h4 class="text-danger mt-5">{{ error_msg }}</h4>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

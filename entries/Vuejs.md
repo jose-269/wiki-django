@@ -1,1 +1,1 @@
-The Progressive JavaScript Framework.
+The Progressive JavaScript Framework. An approachable, performant and versatile framework for building web user interfaces.

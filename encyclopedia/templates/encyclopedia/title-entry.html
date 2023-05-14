@@ -5,13 +5,11 @@
 {% endblock %}
 
 {% block body %}
-  <div class="container">
+  <div class="container-fluid">
     <div class="alert alert-primary" role="alert">
       <h1 class="text-primary found-title">{{ title }}</h1>
       <p class="mt-4">{{ entry }}</p>
     </div>
+    <a href="{% url 'wiki:edit' title %}" type="button" class="btn btn-primary">Edit</a>
   </div>
-
-
-
 {% endblock %}
